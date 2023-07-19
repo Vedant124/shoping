@@ -1,0 +1,78 @@
+8<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="container-fluid_header">
+        <div class="container header_container">
+            <div class="logo">
+                Fashion
+            </div>
+            <button onclick="openFilter()">Filter</button>
+            
+        </div>
+    </header>
+
+
+    <!-- filter-box -->
+
+    <div class="filter-box" id="filter-box">
+        <div class="filter-pro">
+            <h2>Filter</h2>
+            <div class="inp">
+                <label>Search Product Name</label>
+                <input type="text" placeholder="Enter Product Name"
+                 onkeyup="setFilter('product_name',this.value),filterData()">
+            </div>
+            <div class="inp">
+                <label>Select Category</label>
+
+                <select onchange="setFilter('category',this.value),filterData()">
+                    <option value="">Select Category</option>
+                    <option value="Formal Shirt">Formal Shirt</option>
+                    <option value="T-shirt">T-shirt</option>
+                    <option value="jeans">jeanss</option>
+                    <option value="Shorts">Shorts</option>
+                </select>
+            </div>
+            <div class="inp">
+                <label>Enter Min & Max Price</label>
+                <div class="minMaxPrice">
+                    <div>
+                        Min Price
+                        <input type="number"onkeyup="setFilter('minPrice',this.value),filterData()">
+                    </div>
+                    <div>
+                        Max Price
+                        <input type="number"onkeyup="setFilter('maxPrice',this.value),filterData()">
+                    </div>
+                </div>
+            </div>
+            <button onclick="openFilter()">Filter </button>
+
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="container-fluid product">
+
+
+        <div class="container pro-container" id="data">
+            
+        </div>
+
+    </section>
+
+
+    <script src="./js/main.js"></script>
+
+
+
+</body>
+</html>
